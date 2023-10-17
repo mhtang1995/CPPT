@@ -1,0 +1,37 @@
+{
+  "dataset": "figer",
+  "mode": "chat",
+  "times": "3",
+  "device": 3,
+
+  "mask_split": true,
+
+  "backbone": "./Bert/bert-base-cased",
+  "bert_name": "bert-base-cased",
+  "bert_size": 768,
+  "threshold_one": 0.1,
+  "threshold_two": 0.9,
+  "weight": 0.1,
+  "threshold": 0.5,
+
+  "ontology": "./datasets/original/ontology/figer_types.txt",
+  "train": "./datasets/original/figer/chat_train.txt",
+  "valid": "./datasets/original/figer/test.json",
+  "test": "./datasets/original/figer/test.json",
+  "fc_param": "figer_fc.pth",
+  "dense_param": "dense.pth",
+  "ln_param": "ln.pth",
+
+  "lr": 3e-6,
+  "loss_version": 2,
+  "train_batch_size": 16,
+  "test_batch_size": 32,
+  "max_epoch": 1024,
+  "valid_step": 200,
+  "log_step": 20,
+  "patience": 20,
+
+  "save_dir": "./save",
+  "use_checkpoint": false
+
+}
